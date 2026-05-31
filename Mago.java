@@ -7,7 +7,9 @@ package eldoria;
 public class Mago extends Personagem {
 
     
-    // * Construtor para criar um Mago.
+      public Mago(String nome, String classe, int nivel, int poderbase, double pontosdevida){ /*Construtor da classe */
+        super(nome, classe, nivel, nivel, poderbase);
+    }    // * Construtor para criar um Mago.
 
 
 
@@ -17,7 +19,7 @@ public class Mago extends Personagem {
      */
     @Override
     public void usarHabilidade() {
-
+          System.out.println("Mago Conjura chuva de meteoro!");
     }
 }
 
