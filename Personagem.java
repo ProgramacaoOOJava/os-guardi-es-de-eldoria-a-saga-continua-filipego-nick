@@ -7,13 +7,31 @@ import java.util.Objects;
  * Aplica conceitos de encapsulamento, herança e polimorfismo.
  */
 public class abstract Personagem {
-    // Atributos privados (encapsulamento)
+    private String nome, classe;
+    private int nivel, pontosDeVida;
+    private double poderBase; // Atributos privados (encapsulamento)
 
 
-    // * Construtor que inicializa todos os atributos do personagem.
+    public Personagem(String nome, String classe, int nivel, int pontosdevida, double poderbase){
+        this.nome = nome;
+        this.classe = classe;
+        this.nivel = nivel;
+        this.pontosDeVida = pontosdevida;
+        this.poderBase = poderbase;
+    }        // * Construtor que inicializa todos os atributos do personagem.
 
+    public String getNome(){return nome;}
+    public String getClasse(){return classe;}
+    public int getNivel(){return nivel;}
+    public int getPontosDeVida(){return pontosDeVida;}
+    public double getPoderBase(){return poderBase;}
     // Getters
 
+    public void setNome(String nome){this.nome=nome;}
+    public void setClasse(String classe){this.classe=classe;}
+    public void setNivel(int nivel){this.nivel=nivel;}
+    public void setPontosDeVida(int pontosdevida){this.pontosDeVida=pontosdevida;}
+    public void setPoderBase(double poder){this.poderBase=poder;}
     // Setters com validações
 
     // * Criar métodos que define os pontos de vida do personagem.
