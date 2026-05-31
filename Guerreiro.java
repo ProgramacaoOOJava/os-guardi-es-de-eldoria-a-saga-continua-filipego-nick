@@ -6,7 +6,10 @@ package eldoria;
  */
 public class Guerreiro extends Personagem {
 
-     // * Construtor para criar um Guerreiro.
+        public Guerreiro(String nome, String classe, int nivel, int poderbase, double pontosdevida){
+        super(nome, classe, nivel, nivel, poderbase); // * Construtor para criar um Guerreiro.
+    }
+
 
     /**
      * Sobrescrita do método usarHabilidade() específica para Guerreiros.
@@ -14,7 +17,7 @@ public class Guerreiro extends Personagem {
      */
     @Override
     public void usarHabilidade() {
-
+             System.out.println("Guerreiro usa golpe Titânico!");
     }
 }
 
