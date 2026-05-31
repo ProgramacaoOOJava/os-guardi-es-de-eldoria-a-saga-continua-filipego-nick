@@ -12,13 +12,20 @@ public class Main {
         System.out.println("=== BEM-VINDOS AO REINO DE ELDORIA ===");
         System.out.println("Os Guardiões se preparam para a batalha!\n");
         
-        // Criando uma lista polimórfica de personagens
+        ArrayList<Personagem> personagens = new ArrayList<>(); // Criando uma lista polimórfica de personagens
         
-        // Adicionando Magos à lista
+        personagens.add(new Mago("Arkanis","bruxo" , 4, 6, 7));
+        personagens.add(new Mago("Thaunis","ilusionista" , 3, 5, 8));// Adicionando Magos à lista
         
+        personagens.add(new Guerreiro("Oman","Soldado" , 5, 4, 6));
+        personagens.add(new Guerreiro("Naufal","Coronel" , 8, 5, 5));
         // Adicionando Guerreiros à lista
         
-        // Percorrendo a lista e demonstrando polimorfismo
-        
+        for(Personagem personagem : personagens){   /*Execução do jogo e percorrimento da lista */
+            personagem.exibirStatus();
+            personagem.usarHabilidade();
+            System.out.println("\n-----------------------------\n");// Percorrendo a lista e demonstrando polimorfismo
+        }
+    }
 }
 
